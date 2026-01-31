@@ -130,7 +130,7 @@
   
   .home-inner {
     width: min(1100px, 92vw);
-    opacity: 0;
+    opacity: 1;
     transform: translateY(28px);
     transition: 0.7s ease;
   }
@@ -139,6 +139,16 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+/* Default: show intro, hide home */
+#home .home-inner { opacity: 0; transform: translateY(28px); pointer-events: none; }
+
+/* When you go to #home: show home */
+#home:target .home-inner { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+/* ALSO: when page loads with no hash, show intro fully */
+#intro { opacity: 1; pointer-events: auto; }
+
   
   /* Top nav */
   .topbar {
