@@ -141,13 +141,13 @@
   }
 
 /* Default: show intro, hide home */
-#home .home-inner { opacity: 0; transform: translateY(28px); pointer-events: none; }
+/*#home .home-inner { opacity: 0; transform: translateY(28px); pointer-events: none; }
 
 /* When you go to #home: show home */
-#home:target .home-inner { opacity: 1; transform: translateY(0); pointer-events: auto; }
+/*#home:target .home-inner { opacity: 1; transform: translateY(0); pointer-events: auto; }
 
 /* ALSO: when page loads with no hash, show intro fully */
-#intro { opacity: 1; pointer-events: auto; }
+/*#intro { opacity: 1; pointer-events: auto; }
 
   
   /* Top nav */
