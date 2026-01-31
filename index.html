@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alisha Jain Studio✨</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Background video -->
+  <video autoplay loop muted playsinline class="bg-video">
+    <source src="cozy.mp4" type="video/mp4" />
+  </video>
+  <div class="overlay"></div>
+
+  <main>
+    <!-- INTRO SCREEN -->
+    <section class="screen intro" id="intro">
+      <div class="intro-card">
+        <h1 class="logo typewriter" data-text="Alisha Jain Studio"></h1>
+
+        <p class="tagline">
+          Cozy, human-centered projects — technical + creative.
+        </p>
+
+        <div class="actions">
+          <a class="btn ghost" href="#home">Enter Site ↑</a>
+        </div>
+
+        <div class="hint">scroll / swipe up to enter</div>
+      </div>
+    </section>
+
+    <!-- HOME SCREEN -->
+    <section class="screen home" id="home">
+      <div class="home-inner home-hero">
+        <header class="topbar">
+          <h2 class="top-logo">Alisha Jain Studio✨</h2>
+
+          <nav class="topnav">
+            <a href="#home" class="active">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero2">
+          <img src="alisha.png" alt="Alisha portrait" class="hero2-avatar" />
+
+          <h3 class="hero2-title">Hi, I’m Alisha!</h3>
+
+          <p class="hero2-subtitle">
+            Building systems that work — and experiences that feel.
+          </p>
+
+          <div class="actions home-actions">
+            <a
+              class="btn"
+              href="Alisha_Jain_Resume.pdf"
+              download
+              target="_blank"
+              rel="noopener"
+            >
+              Download Resume
+            </a>
+            
+          </div>
+
+          <div class="social-icons">
+            <a href="https://www.instagram.com/alijihn/" target="_blank"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/alishajainconnect/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </section>
+
+        <!-- MUG NAVIGATION -->
+        <section class="mug-grid">
+          <a href="experience.html" class="mug-link">
+            <img src="coffeemug.png" alt="Experience Mug" />
+            <span>Experience</span>
+          </a>
+
+          <a href="projects.html" class="mug-link">
+            <img src="coffeemug.png" alt="Projects Mug" />
+            <span>Projects</span>
+          </a>
+
+          <a href="about.html" class="mug-link">
+            <img src="coffeemug.png" alt="About Mug" />
+            <span>About Me</span>
+          </a>
+
+          <a href="contact.html" class="mug-link">
+            <img src="coffeemug.png" alt="Contact Mug" />
+            <span>Contact Me ☁️</span>
+          </a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Typewriter Script -->
+  <script>
+    const tw = document.querySelector(".typewriter");
+    if (tw) {
+      const text = tw.getAttribute("data-text") || "";
+      let i = 0;
+      tw.textContent = "";
+      const speed = 40;
+
+      function type() {
+        if (i < text.length) {
+          tw.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    }
+  </script>
+</body>
+</html>

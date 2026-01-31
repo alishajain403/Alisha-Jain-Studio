@@ -1,0 +1,528 @@
+/* =====================
+   Alisha Jain Studio – Cozy Final
+   ===================== */
+
+   :root {
+    --bg-dark: #0f0e0d;
+    --text-main: #f6efe6;
+    --text-muted: rgba(246,239,230,0.75);
+    --accent: #c8a67d;
+    --accent-soft: #f1d3a7;
+    --card-bg: rgba(255,255,255,0.07);
+    --card-border: rgba(255,255,255,0.14);
+    --radius: 18px;
+    --shadow: 0 12px 30px rgba(0,0,0,0.25);
+  }
+  
+  /* Reset */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  html { scroll-behavior: smooth; }
+  
+  body {
+    font-family: "DM Serif Display", serif;
+    background: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+  }
+  
+  /* Background */
+  .bg-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(0.55);
+  }
+  
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(0,0,0,0.35), rgba(0,0,0,0.75));
+    z-index: -1;
+  }
+  
+  /* Screens */
+  .screen {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem 1.2rem;
+  }
+  
+  /* INTRO */
+  .intro-card {
+    width: min(900px, 92vw);
+    padding: 2.4rem 1.8rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 2.9rem;
+    color: var(--accent-soft);
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.6px;
+  }
+  
+  /* Typewriter */
+  .typewriter {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(246,239,230,0.9);
+    padding-right: 6px;
+    animation: caretBlink 0.9s step-end infinite;
+  }
+  
+  @keyframes caretBlink {
+    50% { border-color: transparent; }
+  }
+  
+  .tagline {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 1.6rem;
+  }
+  
+  /* Buttons */
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 0.65rem 1.3rem;
+    border-radius: 12px;
+    background: var(--accent);
+    color: #2a1c12;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s ease;
+  }
+  
+  .btn:hover {
+    background: var(--accent-soft);
+    transform: translateY(-2px);
+  }
+  
+  .btn.ghost {
+    background: rgba(255,255,255,0.1);
+    color: var(--text-main);
+    border: 1px solid var(--card-border);
+  }
+  
+  .hint {
+    margin-top: 1.3rem;
+    font-size: 0.9rem;
+    color: rgba(246,239,230,0.6);
+  }
+  
+  /* HOME */
+  .home { align-items: start; }
+  
+  .home-inner {
+    width: min(1100px, 92vw);
+    opacity: 0;
+    transform: translateY(28px);
+    transition: 0.7s ease;
+  }
+  
+  .home:target .home-inner {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Top nav */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .top-logo {
+    font-family: "Pacifico", cursive;
+    font-size: 1.7rem;
+    color: var(--accent-soft);
+  }
+  
+  .topnav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--text-muted);
+  }
+  
+  .topnav a:hover { color: var(--text-main); }
+  
+  /* Hero */
+  .hero2 {
+    text-align: center;
+    padding: 2.2rem 1.8rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+  }
+  
+  .hero2-avatar {
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    margin-bottom: 1.2rem;
+  }
+  
+  .hero2-title {
+    font-size: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--accent-soft);
+  }
+  
+  .hero2-subtitle {
+    max-width: 680px;
+    margin: 0 auto 1.3rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  
+  /* Social icons */
+  .social-icons {
+    margin-top: 1.1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+  
+  .social-icons a {
+    font-size: 1.6rem;
+    color: var(--text-main);
+    opacity: 0.8;
+  }
+  
+  .social-icons a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+  
+  /* MUGS */
+  .mug-grid {
+    margin-top: 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+    gap: 2.2rem;
+    justify-items: center;
+  }
+  
+  .mug-link {
+    position: relative;
+    animation: floaty 3s ease-in-out infinite alternate;
+    text-decoration: none;
+  }
+  
+  .mug-link img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25));
+  }
+  
+  .mug-link span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.65);
+  }
+  
+  @keyframes floaty {
+    from { transform: translateY(0); }
+    to { transform: translateY(-6px); }
+  }
+  
+  /* Mobile */
+  @media (max-width: 600px) {
+    .hero2-title { font-size: 2.4rem; }
+    .hero2-avatar { width: 145px; height: 145px; }
+    .mug-link img { width: 120px; height: 120px; }
+  }
+  
+
+  /* project style
+
+  /* =========================
+   PAPER MODE (Projects page)
+   ========================= */
+
+body.paper-mode {
+    background: #efe3d7;
+    color: #3b2a1e;
+  }
+  
+  body.paper-mode .bg-video,
+  body.paper-mode .overlay {
+    display: none;
+  }
+  
+  .paper-page {
+    width: min(1000px, 92vw);
+    margin: 0 auto;
+    padding: 3rem 1.2rem 4rem;
+  }
+  
+  .paper-back {
+    display: inline-block;
+    font-size: 1.05rem;
+    color: #3b2a1e;
+    text-decoration: none;
+    opacity: 0.8;
+    margin-bottom: 1.6rem;
+  }
+  
+  .paper-back:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  
+  .paper-header {
+    margin-bottom: 2rem;
+  }
+  
+  .paper-title {
+    font-size: 2.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-bottom: 0.7rem;
+  }
+  
+  .paper-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 900px;
+    opacity: 0.9;
+  }
+  
+  .paper-divider {
+    border: none;
+    height: 1px;
+    background: rgba(59, 42, 30, 0.18);
+    margin: 2rem 0;
+  }
+  
+  .paper-soft-divider {
+    border: none;
+    height: 1px;
+    background: rgba(59, 42, 30, 0.10);
+    margin: 2.2rem 0;
+  }
+  
+  .paper-section {
+    margin-top: 1rem;
+  }
+  
+  .paper-section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    opacity: 0.95;
+  }
+  
+  .paper-project {
+    padding: 0.6rem 0 0.2rem;
+  }
+  
+  .paper-project-title {
+    font-size: 2.0rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .paper-project-meta {
+    font-size: 1rem;
+    opacity: 0.75;
+    margin-bottom: 0.9rem;
+  }
+  
+  .paper-project-desc {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    margin-bottom: 0.9rem;
+    opacity: 0.95;
+    max-width: 900px;
+  }
+  
+  .paper-bullets {
+    margin-left: 1.2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+  
+  .paper-bullets li {
+    margin: 0.35rem 0;
+  }
+  
+  .paper-links {
+    margin-top: 0.6rem;
+  }
+  
+  .paper-link {
+    color: #2b4fff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  
+  .paper-link:hover {
+    opacity: 0.9;
+  }
+  
+  .paper-link.disabled {
+    color: rgba(59, 42, 30, 0.45);
+    text-decoration: none;
+    pointer-events: none;
+  }
+  
+  .paper-note {
+    font-style: italic;
+    opacity: 0.7;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .paper-title { font-size: 2.4rem; }
+    .paper-project-title { font-size: 1.55rem; }
+    .paper-subtitle { font-size: 1.05rem; }
+  }
+  
+/* about style
+
+/* =========================
+   ABOUT PAGE STYLES
+   ========================= */
+
+   .about-portrait-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0 2rem;
+  }
+  
+  .about-portrait {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(59, 42, 30, 0.25);
+  }
+  
+  .about-section {
+    max-width: 850px;
+    margin: 0 auto 1.6rem;
+    line-height: 1.75;
+  }
+  
+  .about-lead {
+    font-size: 1.55rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .about-subhead {
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+    opacity: 0.9;
+  }
+  
+  .about-section p {
+    font-size: 1.08rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .about-closing {
+    font-style: italic;
+    opacity: 0.8;
+  }
+  
+
+  /* =========================
+   CONTACT PAGE
+   ========================= */
+
+.contact-page {
+    max-width: 820px;
+  }
+  
+  .contact-form {
+    background: rgba(255, 255, 255, 0.35);
+    padding: 2rem 2rem 2.2rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-top: 2rem;
+  }
+  
+  .contact-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.7rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(59, 42, 30, 0.25);
+    font-size: 1rem;
+    background: rgba(255,255,255,0.75);
+    font-family: inherit;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: rgba(59, 42, 30, 0.6);
+    background: rgba(255,255,255,0.9);
+  }
+  
+  .contact-btn {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    padding: 0.55rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background: #3b2a1e;
+    color: #f4eadf;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  
+  .contact-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+  }
+  
+  .contact-signature {
+    margin-top: 2.5rem;
+    font-style: italic;
+    opacity: 0.85;
+  }
+  
+  .contact-signature img {
+    margin-top: 0.4rem;
+    max-width: 140px;
+    display: block;
+  }
+  

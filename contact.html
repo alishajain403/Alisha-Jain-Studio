@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact · Alisha Jain Studio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="paper-mode">
+  <main class="paper-page contact-page">
+    <a href="index.html#home" class="paper-back">← back to home</a>
+
+    <header class="paper-header">
+      <h1 class="paper-title">let’s connect 💌</h1>
+      <p class="paper-subtitle">
+        Have a question, an idea, or just want to say hi?  
+        Drop me a note — I’d love to hear from you.
+      </p>
+    </header>
+
+    <form 
+      class="contact-form" 
+      action="https://formspree.io/f/mnnvaqod" 
+      method="POST"
+    >
+      <label>
+        <span>Your name</span>
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        <span>Your email</span>
+        <input type="email" name="_replyto" required />
+      </label>
+
+      <label>
+        <span>Your message</span>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+
+      <button type="submit" class="contact-btn">Send message</button>
+    </form>
+
+    
+  </main>
+</body>
+</html>
