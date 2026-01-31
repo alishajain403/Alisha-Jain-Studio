@@ -535,4 +535,13 @@ body.paper-mode {
     max-width: 140px;
     display: block;
   }
+
+/* 🚑 EMERGENCY FIX: force home to show on GitHub Pages */
+#home .home-inner {
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+  display: block !important;
+}
+
   
